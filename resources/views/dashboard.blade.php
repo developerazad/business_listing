@@ -23,6 +23,8 @@
                                 <th>Address</th>
                                 <th>Website</th>
                                 <th>phone</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
 
@@ -32,6 +34,16 @@
                                     <th>{{ $list->address }}</th>
                                     <th>{{ $list->website }}</th>
                                     <th>{{ $list->phone }}</th>
+                                    <th>
+                                        <a href="{{ url('listings/'.$list->id.'/edit') }}"><button class="btn btn-alert btn-xs">Edit</button></a>
+                                    </th>
+                                    <th>
+                                        <form action="{{ url('/listings', ['id' => $list->id]) }}" method="post">
+                                            <input class="btn btn-danger btn-xs" type="submit" value="Delete" />
+                                            <input type="hidden" name="_method" value="delete" />
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        </form>
+                                    </th>
                                 </tr>
                             @endforeach
                         </table>

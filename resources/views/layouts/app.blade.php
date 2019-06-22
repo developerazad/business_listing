@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/dashboard') }}">
-                        {{ config('app.name', 'Larabiz') }}
+                        {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 

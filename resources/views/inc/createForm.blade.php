@@ -1,5 +1,6 @@
     <form action="{{ route('listings.store') }}" method="POST">
             {{ csrf_field() }}
+
         <div class="form-group"> <!-- Name -->
             <label for="full_name_id" class="control-label">Name</label>
             <input type="text" class="form-control" id="full_name_id" name="name" placeholder="Enter Your Name">
