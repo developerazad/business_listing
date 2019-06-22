@@ -1,5 +1,5 @@
-    <form action="{{ url('/listings/store') }}" method="post">
-
+    <form action="{{ route('listings.store') }}" method="POST">
+            {{ csrf_field() }}
         <div class="form-group"> <!-- Name -->
             <label for="full_name_id" class="control-label">Name</label>
             <input type="text" class="form-control" id="full_name_id" name="name" placeholder="Enter Your Name">
@@ -7,7 +7,7 @@
 
         <div class="form-group"> <!-- Address 1 -->
             <label for="street1_id" class="control-label">Address</label>
-            <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+            <input type="text" class="form-control" id="street1_id" name="address" placeholder="Street address, P.O. box, company name, c/o">
         </div>
 
         {{--<div class="form-group"> <!-- Address 2 -->--}}
@@ -22,7 +22,7 @@
 
         <div class="form-group"> <!-- E-mail-->
             <label for="zip_id" class="control-label">E-mail</label>
-            <input type="text" class="form-control" id="zip_id" name="email" placeholder="example@gmail.com">
+            <input type="email" class="form-control" id="zip_id" name="email" placeholder="example@gmail.com">
         </div>
         <div class="form-group"> <!-- Phone-->
             <label for="zip_id" class="control-label">Phone</label>

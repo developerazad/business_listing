@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/dashboard') }}">
+                        {{ config('app.name', 'Larabiz') }}
                     </a>
                 </div>
 
@@ -71,6 +71,7 @@
             </div>
         </nav>
         <div class="container">
+            @include('inc.messages')
             @yield('content')
         </div>
 
